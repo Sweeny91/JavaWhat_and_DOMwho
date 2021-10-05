@@ -20,11 +20,14 @@ function buildTable(table) {
         let row = tbody.append("tr");
 
         // Create key:value object and append each entry to to current row as such
+        // This will iterate through each item in every object
         Object.entries(siting).forEach(function([key, value]) {
 
             // console.log(key, value);
-
+            // make variable for the cell in order for value to be added
             let cell = row.append("td");
+
+            // enter the value of this entrie into the corressponding cell
             cell.text(value);
         });
     });
